@@ -1,2 +1,2 @@
 # Santos.github.io
-Personal technical blog, sharing knowledge about financial risk control and python machine learning
+这是关于AI学习的路线的仓库
