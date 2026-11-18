@@ -1,0 +1,37 @@
+name: Publish vibe_coding guide
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Restore guide and clean temporary files
+        run: |
+          set -euo pipefail
+          if [ -e vibe_coding ]; then
+            echo "vibe_coding already exists"
+            exit 1
+          fi
+          cat .publish/vibe-part-*.b64 | tr -d '\n' | base64 --decode | tar -xzf - -C .
+          test -f vibe_coding/README.md
+          test -f vibe_coding/principles.md
+          test -f vibe_coding/ai-scenarios.md
+          test -f vibe_coding/engineering-guide.md
+          test -f vibe_coding/project-casebook.md
+          test -f vibe_coding/references.md
+          test -f vibe_coding/assets/vibe-coding-system.svg
+          test -f vibe_coding/assets/quality-gates.svg
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/publish-vibe-coding.yml
+          git rm -r .publish
+          git add vibe_coding
+          git commit -m "Add vibe_coding research guide"
+          git push origin HEAD:main
