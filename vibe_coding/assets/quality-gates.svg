@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Vibe Coding 质量门</title>
+  <desc id="desc">AI 生成代码依次经过正确性、可复现性、安全与隐私、性能与成本、可观测性和人工判断六道质量门。</desc>
+  <rect width="1200" height="700" fill="#f8f9fb"/>
+  <text x="72" y="74" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#111827">从候选代码到可接受变更</text>
+  <text x="72" y="110" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#4b5563">验证覆盖系统行为、研究效度与人的责任边界</text>
+
+  <defs>
+    <marker id="qaArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+
+  <g stroke="#9ca3af" stroke-width="3" marker-end="url(#qaArrow)">
+    <line x1="225" y1="210" x2="283" y2="210"/>
+    <line x1="448" y1="210" x2="506" y2="210"/>
+    <line x1="671" y1="210" x2="729" y2="210"/>
+    <line x1="894" y1="210" x2="952" y2="210"/>
+    <line x1="1103" y1="318" x2="1103" y2="420"/>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <g>
+      <rect x="72" y="135" width="153" height="150" rx="20" fill="#111827"/>
+      <text x="148" y="184" font-size="22" font-weight="700" fill="#ffffff">正确性</text>
+      <text x="148" y="219" font-size="15" fill="#d1d5db">需求与语义</text>
+      <text x="148" y="245" font-size="15" fill="#d1d5db">边界与失败路径</text>
+    </g>
+    <g>
+      <rect x="295" y="135" width="153" height="150" rx="20" fill="#e8eef8" stroke="#b8c6dd"/>
+      <text x="371" y="184" font-size="22" font-weight="700" fill="#111827">可复现性</text>
+      <text x="371" y="219" font-size="15" fill="#4b5563">版本 · 种子</text>
+      <text x="371" y="245" font-size="15" fill="#4b5563">数据 · 环境</text>
+    </g>
+    <g>
+      <rect x="518" y="135" width="153" height="150" rx="20" fill="#fff3e7" stroke="#f0c99f" stroke-width="2"/>
+      <text x="594" y="184" font-size="22" font-weight="700" fill="#111827">安全隐私</text>
+      <text x="594" y="219" font-size="15" fill="#4b5563">最小权限</text>
+      <text x="594" y="245" font-size="15" fill="#4b5563">注入 · 泄漏</text>
+    </g>
+    <g>
+      <rect x="741" y="135" width="153" height="150" rx="20" fill="#eef7f0" stroke="#bddbc5" stroke-width="2"/>
+      <text x="817" y="184" font-size="22" font-weight="700" fill="#111827">性能成本</text>
+      <text x="817" y="219" font-size="15" fill="#4b5563">延迟 · 算力</text>
+      <text x="817" y="245" font-size="15" fill="#4b5563">预算 · 退化</text>
+    </g>
+    <g>
+      <rect x="964" y="135" width="153" height="150" rx="20" fill="#f0ecf9" stroke="#cfc2e8" stroke-width="2"/>
+      <text x="1040" y="184" font-size="22" font-weight="700" fill="#111827">可观测</text>
+      <text x="1040" y="219" font-size="15" fill="#4b5563">日志 · 轨迹</text>
+      <text x="1040" y="245" font-size="15" fill="#4b5563">证据 · 审计</text>
+    </g>
+    <g>
+      <rect x="944" y="420" width="260" height="170" rx="24" fill="#1f4f3a"/>
+      <text x="1074" y="478" font-size="25" font-weight="700" fill="#ffffff">人工判断</text>
+      <text x="1074" y="516" font-size="16" fill="#d8eadf">语义与科学解释</text>
+      <text x="1074" y="545" font-size="16" fill="#d8eadf">高风险取舍与责任</text>
+    </g>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="72" y="360" width="760" height="245" rx="24" fill="#ffffff" stroke="#d9dde5"/>
+    <text x="104" y="407" font-size="21" font-weight="700" fill="#111827">接受条件</text>
+    <text x="104" y="448" font-size="17" fill="#374151">✓ 明确需求均有对应验收证据</text>
+    <text x="104" y="483" font-size="17" fill="#374151">✓ 测试实际运行，且不与被测实现共享同源错误</text>
+    <text x="104" y="518" font-size="17" fill="#374151">✓ 高风险操作可回滚、可审计或已获人工批准</text>
+    <text x="104" y="553" font-size="17" fill="#374151">✓ 研究结论不超出统计证据与实验设计</text>
+    <text x="104" y="588" font-size="17" fill="#374151">✓ 后续维护者可以复现运行并定位失败</text>
+  </g>
+
+  <path d="M1103 318 C1103 360 960 350 888 380" fill="none" stroke="#2f6b4b" stroke-width="3" stroke-dasharray="8 7"/>
+  <text x="970" y="354" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#24543c">需要责任判断时</text>
+</svg>

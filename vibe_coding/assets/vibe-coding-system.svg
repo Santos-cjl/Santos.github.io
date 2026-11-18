@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Vibe Coding 系统结构</title>
+  <desc id="desc">从人的目标和意图开始，经过上下文构造、模型规划、受限工具执行、验证证据，再回到修订或产生可追溯变更。</desc>
+  <rect width="1200" height="620" fill="#f7f8fa"/>
+  <text x="72" y="72" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#111827">Vibe Coding 系统结构</text>
+  <text x="72" y="108" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#4b5563">概率性生成被确定性验证与权限边界包围</text>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <g>
+      <rect x="72" y="170" width="178" height="150" rx="18" fill="#111827"/>
+      <text x="161" y="221" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">人的意图</text>
+      <text x="161" y="253" text-anchor="middle" font-size="15" fill="#d1d5db">目标 · 非目标</text>
+      <text x="161" y="278" text-anchor="middle" font-size="15" fill="#d1d5db">验收 · 风险</text>
+    </g>
+    <g>
+      <rect x="290" y="170" width="178" height="150" rx="18" fill="#e8eef8" stroke="#b8c6dd"/>
+      <text x="379" y="221" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">上下文构造</text>
+      <text x="379" y="253" text-anchor="middle" font-size="15" fill="#4b5563">仓库 · 数据 · 文档</text>
+      <text x="379" y="278" text-anchor="middle" font-size="15" fill="#4b5563">测试失败 · 约束</text>
+    </g>
+    <g>
+      <rect x="508" y="170" width="178" height="150" rx="18" fill="#eaf0ff" stroke="#b6c7f4" stroke-width="2"/>
+      <text x="597" y="221" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">模型规划</text>
+      <text x="597" y="253" text-anchor="middle" font-size="15" fill="#4b5563">候选方案</text>
+      <text x="597" y="278" text-anchor="middle" font-size="15" fill="#4b5563">代码 · 测试 · 文档</text>
+    </g>
+    <g>
+      <rect x="726" y="170" width="178" height="150" rx="18" fill="#fff3e7" stroke="#f0c99f" stroke-width="2"/>
+      <text x="815" y="221" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">受限执行</text>
+      <text x="815" y="253" text-anchor="middle" font-size="15" fill="#4b5563">工具 · MCP · 沙箱</text>
+      <text x="815" y="278" text-anchor="middle" font-size="15" fill="#4b5563">权限 · 超时 · 预算</text>
+    </g>
+    <g>
+      <rect x="944" y="170" width="178" height="150" rx="18" fill="#e8f5ed" stroke="#aad4ba" stroke-width="2"/>
+      <text x="1033" y="221" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">验证证据</text>
+      <text x="1033" y="253" text-anchor="middle" font-size="15" fill="#4b5563">测试 · 审查</text>
+      <text x="1033" y="278" text-anchor="middle" font-size="15" fill="#4b5563">复现 · 可观测</text>
+    </g>
+  </g>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#6b7280"/>
+    </marker>
+    <marker id="arrowStrong" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#c75b2a"/>
+    </marker>
+  </defs>
+
+  <g stroke="#6b7280" stroke-width="3" marker-end="url(#arrow)">
+    <line x1="250" y1="245" x2="278" y2="245"/>
+    <line x1="468" y1="245" x2="496" y2="245"/>
+    <line x1="686" y1="245" x2="714" y2="245"/>
+    <line x1="904" y1="245" x2="932" y2="245"/>
+  </g>
+
+  <path d="M1033 170 C1033 105 677 105 597 145" fill="none" stroke="#c75b2a" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrowStrong)"/>
+  <text x="813" y="100" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#9a3f1c">失败证据触发定向修订</text>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="72" y="390" width="1050" height="132" rx="20" fill="#ffffff" stroke="#d9dde5"/>
+    <text x="104" y="430" font-size="19" font-weight="700" fill="#111827">责任边界</text>
+    <text x="104" y="462" font-size="16" fill="#374151">人：定义问题、验收标准、风险取舍与科学解释</text>
+    <text x="104" y="491" font-size="16" fill="#374151">模型：生成计划与候选实现，扩大搜索空间</text>
+    <text x="710" y="462" font-size="16" fill="#374151">工具：执行动作并提供可观察反馈</text>
+    <text x="710" y="491" font-size="16" fill="#374151">测试：淘汰违反约束与需求的候选</text>
+  </g>
+</svg>
